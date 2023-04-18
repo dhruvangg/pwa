@@ -23,11 +23,10 @@
 
         window.addEventListener('DOMContentLoaded', () => {
             const parsedUrl = new URL(window.location);
-            alert(parsedUrl)
             document.querySelector("#content").innerHTML = `
-            <p>Title Shared: ${parsedUrl.searchParams.get('title')}</p>
-            <p>Text Shared: ${parsedUrl.searchParams.get('text')}</p>
-            <p>URL Shared: ${parsedUrl.searchParams.get('url')}</p>
+            <p>Title Shared: ${parsedUrl.searchParams.get('name')}</p>
+            <p>Text Shared: ${parsedUrl.searchParams.get('description')}</p>
+            <p>URL Shared: ${parsedUrl.searchParams.get('link')}</p>
             `
         });
     </script>
