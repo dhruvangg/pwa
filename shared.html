@@ -17,18 +17,19 @@
         <p id="content"></p>
     </div>
     <script>
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/sw.js', { scope: '/' });
+        }
+
         window.addEventListener('DOMContentLoaded', () => {
             const parsedUrl = new URL(window.location);
+            alert(parsedUrl)
             document.querySelector("#content").innerHTML = `
             <p>Title Shared: ${parsedUrl.searchParams.get('title')}</p>
             <p>Text Shared: ${parsedUrl.searchParams.get('text')}</p>
             <p>URL Shared: ${parsedUrl.searchParams.get('url')}</p>
             `
         });
-
-        if ('serviceWorker' in navigator) {
-            navigator.serviceWorker.register('/sw.js', { scope: '/' });
-        }
     </script>
 
 
