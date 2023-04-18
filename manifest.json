@@ -3,19 +3,19 @@
     "name": "Temperature converter app",
     "short_name": "Temperature converter",
     "description": "A basic temperature converter application that can convert to and from Celsius, Kelvin, and Fahrenheit",
-    "start_url": "/pwa",
+    "start_url": "/",
     "background_color": "#2f3d58",
     "theme_color": "#2f3d58",
     "orientation": "any",
     "display": "standalone",
     "icons": [
         {
-            "src": "/pwa/icon512.png",
+            "src": "/icon512.png",
             "sizes": "512x512"
         }
     ],
     "share_target": {
-        "action": "https://dhruvangg.github.io/pwa/shared.html",
+        "action": "/shared.html",
         "method": "GET",
         "enctype": "application/x-www-form-urlencoded",
         "params": {
