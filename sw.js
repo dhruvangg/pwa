@@ -5,9 +5,9 @@ self.addEventListener('install', event => {
     event.waitUntil((async () => {
         const cache = await caches.open(CACHE_NAME);
         cache.addAll([
-            '/',
-            '/shared.html',
-            '/style.css'
+            '/pwa',
+            '/pwa/shared.html',
+            '/pwa/style.css'
         ]);
     })());
 });

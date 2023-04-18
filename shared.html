@@ -25,7 +25,13 @@
             <p>URL Shared: ${parsedUrl.searchParams.get('url')}</p>
             `
         });
+
+        if ('serviceWorker' in navigator) {
+            navigator.serviceWorker.register('/pwa/sw.js', { scope: '/pwa' });
+        }
     </script>
+
+
 </body>
 
 </html>
